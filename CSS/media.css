@@ -1,0 +1,359 @@
+/* @media (min-width:0px){
+
+    .s-100{
+        width: 100%;
+    }
+
+    .s-50{
+        width: 50%;
+    }
+
+    .s-33{
+        width: 33.333%;
+    }
+    
+    .s-30{
+        width: 30%;
+    }
+
+    .s-25{
+        width: 25%;
+    }
+
+    .s-20{
+        width: 20%;
+    }
+
+    .s-16{
+        width: 16.66%;
+    }
+}
+
+
+@media (min-width:640px){
+
+    .sm-100{
+        width: 100%;
+    }
+
+    .sm-80{
+        width: 80%;
+    }
+
+    .sm-50{
+        width: 50%;
+    }
+
+    .sm-33{
+        width: 33.333%;
+    }
+
+    
+    .sm-30{
+        width: 30%;
+    }
+
+    .sm-25{
+        width: 25%;
+    }
+
+    .sm-20{
+        width: 20%;
+    }
+
+    .sm-16{
+        width: 16.66%;
+    }
+}
+
+@media (max-width: 768px) {
+    .chef-card {
+        width: 100%;
+    }
+    .galery .meals .meal {
+        width: 100%;
+    }
+}
+
+
+@media (min-width:768px){
+
+    .md-100{
+        width: 100%;
+    }
+
+
+    .md-40{
+        width: 40%;
+    }
+
+    .md-50{
+        width: 50%;
+    }
+
+    
+    .md-30{
+        width: 30%;
+    }
+
+    .md-33{
+        width: 33.333%;
+    }
+
+    .md-25{
+        width: 25%;
+    }
+
+    .md-20{
+        width: 20%;
+    }
+
+    .md-16{
+        width: 16.66%;
+    }
+}
+
+
+@media (min-width:1024px){
+
+    .lg-100{
+        width: 100%;
+    }
+
+    .lg-50{
+        width: 50%;
+    }
+
+    .lg-30{
+        width: 30%;
+    }
+
+    .lg-33{
+        width: 33.333%;
+    }
+
+    .lg-25{
+        width: 25%;
+    }
+
+    .lg-20{
+        width: 20%;
+    }
+
+    .lg-16{
+        width: 16.66%;
+    }
+}
+
+
+@media (min-width:1280px){
+
+    .xl-100{
+        width: 100%;
+    }
+
+    .xl-50{
+        width: 50%;
+    }
+
+    
+    .xl-30{
+        width: 30%;
+    }
+
+    .xl-33{
+        width: 33.333%;
+    }
+
+    .xl-25{
+        width: 25%;
+    }
+
+    .xl-20{
+        width: 20%;
+    }
+
+    .xl-16{
+        width: 16.66%;
+    }
+}
+
+
+@media (min-width:1536px){
+
+    .xxl-100{
+        width: 100%;
+    }
+
+    .xxl-50{
+        width: 100%;
+    }
+
+    .xxl-30{
+        width: 30%;
+    }
+
+    .xxl-33{
+        width: 33.333%;
+    }
+
+    .xxl-25{
+        width: 25%;
+    }
+
+    .xxl-20{
+        width: 20%;
+    }
+
+    .xxl-16{
+        width: 16.66%;
+    }
+}
+ */
+
+/* الميديا اللي اخدناها في السيشن وبنروح نستدعيها في الديف علي طول مظبطتش معايا في حاجات كتير  */
+
+@media (max-width: 768px) {
+  nav {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  nav ul {
+    padding-top: 10px;
+    width: 50%;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .mode {
+    padding-top: 10px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  nav {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  nav ul {
+    padding-top: 10px;
+    width: 50%;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .mode {
+    padding-top: 10px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header .container .text {
+    padding-top: 50px;
+    width: 80%;
+  }
+  header .container .img {
+    padding-top: 20px;
+    width: 80%;
+  }
+
+  header .container .text h2 {
+    font-size: 50px;
+  }
+
+  header .container .text p {
+    font-size: 14px;
+  }
+
+  .chef-card {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .galery .meals {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .galery .meals .meal {
+    width: 100%;
+  }
+
+  .details ul li {
+    width: 100%;
+  }
+
+  .contact form input {
+    width: 100%;
+  }
+
+  footer .social,
+  footer .touch,
+  footer .subscribe {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  footer .subscribe form {
+    flex-direction: column;
+  }
+
+  footer .subscribe input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  footer .subscribe .button {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .container .text h2 {
+    font-size: 72px;
+  }
+
+  header .container .img img {
+    width: 100%;
+  }
+
+  .chef-card {
+    width: 30%;
+    margin: 15px;
+  }
+
+  .galery .meals .meal {
+    width: 30%;
+    height: auto;
+  }
+
+  footer .social {
+    width: 20%;
+    margin: 0 10px;
+  }
+  footer .touch {
+    width: 20%;
+    margin: 0 10px;
+  }
+  footer .subscribe {
+    width: 40%;
+    margin: 0 10px;
+  }
+}

@@ -1,0 +1,690 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding: 30px 20px;
+  max-width: 1350px;
+  margin: auto;
+}
+
+.section-header {
+  margin: 50px 20px;
+  text-align: center;
+}
+
+.section-header p {
+  color: #7f7f90;
+  font-family: "Inter", sans-serif;
+}
+
+.section-header h3 {
+  font-family: "Amatic SC", sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  color: #212529;
+}
+
+.section-header span {
+  color: #ce1212;
+}
+
+a {
+  text-decoration: none;
+  color: #212529;
+}
+
+
+
+/* جزء النافبار  */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5000;
+  background-color: #fff;
+  padding: 15px 0;
+}
+nav h1{
+  font-family: "Inter", sans-serif;
+}
+
+nav ul {
+  display: flex;
+  width: 25%;
+  list-style-type: none;
+  padding: 0;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #7f7f90;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: 400px;
+  position: relative;
+  
+  text-transform: capitalize;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ce1212;
+  transition: all 0.5s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav h1 a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 30px;
+  text-transform: capitalize;
+  position: relative;
+}
+
+nav h1 a::after {
+  content: ".";
+  color: #ce1212;
+}
+
+nav i {
+  color: #000;
+  font-size: 25px;
+}
+
+.fa-moon {
+  color: rgb(24, 23, 22);
+  font-size: 25px;
+  transform: translateX(25px);
+  transition: 0.3s;
+}
+
+.fa-sun {
+  color: #000000;
+  font-size: 25px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#switch-button:checked ~ label > .fa-moon {
+  opacity: 0;
+}
+
+#switch-button:checked ~ label > .fa-sun {
+  opacity: 1;
+}
+
+body:not(body:has(:target)) li a[href="#home"],
+body:has(.home:target) li a[href="#home"],
+body:has(.chefs:target) li a[href="#chefs"],
+body:has(.gallery:target) li a[href="#gallery"],
+body:has(.contact:target) li a[href="#contact"] {
+  color: var(--main-color);
+}
+
+body:not(body:has(:target)) li a[href="#home"]::after,
+body:has(.home:target) li a[href="#home"]::after,
+body:has(.chefs:target) li a[href="#chefs"]::after,
+body:has(.gallery:target) li a[href="#gallery"]::after,
+body:has(.contact:target) li a[href="#contact"]::after {
+  width: 100%;
+}
+
+
+
+
+/* جزء الهوم  */
+header {
+  background-color: #eee;
+  overflow: hidden;
+}
+header .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 70px;
+}
+
+header .container .text {
+  width: 40%;
+}
+
+header .container .img {
+  width: 40%;
+}
+
+header .container .img img {
+  width: 100%;
+  filter: drop-shadow(4px 4px 9px #000);
+}
+
+header .container .img img:hover {
+  animation: tilt-n-move-shaking 0.2s infinite;
+}
+
+@keyframes tilt-n-move-shaking {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(1px, 1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(0, 0) rotate(0eg);
+  }
+
+  75% {
+    transform: translate(-1px, 1px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+header .btn {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+header .btn .video-btn {
+  display: flex;
+  align-items: center;
+}
+
+header .container .text h2 {
+  font-family: "Amatic SC", sans-serif;
+  color: #000000;
+  font-size: 65px;
+}
+
+header p {
+  font-family: "Inter", sans-serif;
+}
+
+.btn .book {
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 25px;
+  background-color: #ce1212;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.video-btn:hover {
+  color: #ce1212;
+}
+
+.video-btn .icon {
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  border-top-width: 7px;
+  border-right-width: 7px;
+  border-bottom-width: 7px;
+  border-left-width: 7px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: #e61414;
+  border-left-color: #e61414;
+  rotate: 45deg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-btn .icon i {
+  rotate: -45deg;
+}
+
+.video-btn span {
+  padding-left: 10px;
+}
+
+.video-btn {
+  color: var#fff;
+  text-decoration: none;
+}
+
+header .container .text p {
+  color: #9f9f9f;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+
+
+
+/* جزء الشيفس  */
+.chefs {
+  background-color: #fff;
+  padding-bottom: 40px;
+}
+
+.chefs .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.chefs .container .section-header {
+  width: 100%;
+}
+
+.chef-card {
+  width: 30%;
+  margin: 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.chefs .chef-card:hover {
+  scale: 1.1;
+}
+
+.chef-card:hover .side {
+  transition-delay: 0.5s;
+  top: 30px;
+  right: 20px;
+}
+
+.side {
+  z-index: 1;
+  position: absolute;
+  width: 40px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  top: 30px;
+  right: -50px;
+}
+
+.chef-card .side i {
+  font-size: 20px;
+  opacity: 0.6;
+  padding: 10px;
+  color: gray;
+}
+
+.side i:hover {
+  opacity: 1;
+}
+
+.chef-photo {
+  position: relative;
+}
+
+.chef-photo img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.chef-photo::after {
+  content: "";
+  background-image: url(../images/team-shape.svg);
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 60px;
+}
+
+.chef-card .text {
+  padding: 25px;
+}
+
+.chef-card .text h3 {
+  font-family: "Inter", sans-serif;
+  color: #000;
+}
+
+.chef-card .text p {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  padding: 10px;
+  color: #7f7f90;
+}
+
+
+
+
+/* جزءالجالاري  */
+.galery {
+  background-color: #eeeeee;
+  text-align: center;
+  width: 100%;
+}
+
+.galery .meals {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 1180px;
+}
+.galery .meals .meal {
+  border: white solid 5px;
+  margin: 15px 0;
+  position: relative;
+  overflow: hidden;
+  width: 32%;
+  align-self: flex-start;
+}
+
+.galery .meals .meal:hover .lair {
+  bottom: 0;
+}
+
+.galery .meals .meal:hover img {
+  scale: 1.25;
+}
+
+.galery .meals .meal img {
+  display: block;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.galery .meals .meal .lair {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  bottom: -1000;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.5s;
+}
+
+.galery .meals .meal .lair h4 {
+  font-size: 30px;
+  font-family: "Inter", sans-serif;
+}
+
+
+
+
+/* جزء التواصل  */
+.contact {
+  background-color: #fff;
+}
+
+.details ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-top: 20px;
+  gap: 2%;
+}
+
+.details ul li {
+  width: 49%;
+  background-color: #f5f5f5;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.details ul li i {
+  background-color: #ce1212;
+  font-size: 20px;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 10px 20px 20px;
+}
+.details ul li h3 {
+  font-family: "Inter", sans-serif;
+  color: #7f7f90;
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+
+.details ul li p {
+  font-family: "Inter", sans-serif;
+  color: #000;
+}
+
+.contact form {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+  justify-content: center;
+
+  background-color: #fff;
+}
+
+.contact form input {
+  width: 49%;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.contact form input[placeholder="subject"] {
+  width: 100%;
+}
+
+.contact form input,
+.contact form textarea {
+  border: #c5c0c0 1px solid;
+  padding: 20px;
+}
+
+.contact form textarea {
+  width: 100%;
+  min-height: 150px;
+  max-height: 400px;
+  text-transform: capitalize;
+}
+
+.contact form .button {
+  font-family: "Inter", sans-serif;
+  margin: 20px;
+  padding: 15px 30px;
+  border-radius: 25px;
+  background-color: #ce1212;
+  color: #fff;
+  text-transform: capitalize;
+  transition: 0.5s;
+}
+form .button:hover {
+  background-color: #e61414;
+}
+
+
+
+/* جزء الفوتر  */
+footer {
+  background-image: url(../images/textured-metal-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+}
+footer .container {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-transform: capitalize;
+  z-index: 2;
+  position: relative;
+}
+
+footer .social {
+  width: 20%;
+  margin: 0 10px;
+}
+footer .touch {
+  width: 20%;
+  margin: 0 10px;
+}
+footer .subscribe {
+  width: 40%;
+  margin: 0 10px;
+}
+
+footer .social .text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+footer .social .text h2 {
+  font-size: 32px;
+  position: relative;
+}
+footer .social .text h2::after {
+  content: ".";
+  color: red;
+}
+
+footer .social .text p {
+  width: 100%;
+}
+
+footer .social .text img {
+  width: 15%;
+  padding-right: 10px;
+}
+
+footer .social .icons {
+  text-align: center;
+}
+
+footer .social .icons h3 {
+  margin: 10px;
+}
+footer .social .icons hr {
+  margin: 10px 0px;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+footer .social .icons i {
+  color: #fff;
+  margin: 10px 15px;
+  font-size: 25px;
+}
+
+footer .subscribe h3 {
+  margin: 10px 0px;
+}
+
+footer .subscribe form {
+  display: flex;
+  align-items: center;
+}
+footer .subscribe input {
+  width: 60%;
+  padding: 12px 10px;
+  margin: 10px 0;
+  border: none;
+}
+
+footer .subscribe .button {
+  padding: 10px 20px;
+  background-color: #ce1212;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 5px;
+}
+
+footer .subscribe .button:hover {
+  background-color: #e61414;
+}
+
+footer .subscribe .quick-links ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .subscribe .quick-links ul li {
+  width: 40%;
+  margin: 10px 20px 0 0;
+  list-style: none;
+  padding: 5px;
+  transition: 0.5s;
+}
+
+footer .subscribe .quick-links ul li i {
+  padding-right: 10px;
+}
+
+footer .subscribe .quick-links ul li a {
+  color: #fff;
+}
+
+footer .subscribe .quick-links ul li:hover {
+  transform: translatex(10px);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+footer .touch h3 {
+  margin: 10px 0px;
+}
+
+footer .touch ul li {
+  display: flex;
+  align-items: center;
+}
+
+footer .touch ul li a {
+  color: #fff;
+}
+
+footer .touch ul li i {
+  color: #ce1212;
+  margin: 10px;
+  font-size: 25px;
+}
